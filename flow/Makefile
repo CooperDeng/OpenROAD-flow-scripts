@@ -43,7 +43,8 @@
 # DESIGN_CONFIG=./designs/sky130hd/gcd/config.mk
 # DESIGN_CONFIG=./designs/sky130hd/max/config.mk
 # DESIGN_CONFIG=./designs/sky130hd/ece327_div/config.mk
-DESIGN_CONFIG=./designs/sky130hd/ece327_exp/config.mk
+# DESIGN_CONFIG=./designs/sky130hd/ece327_exp/config.mk
+DESIGN_CONFIG=./designs/sky130hd/ece327_mm/config.mk
 # DESIGN_CONFIG=./designs/sky130hd/ibex/config.mk
 # DESIGN_CONFIG=./designs/sky130hd/jpeg/config.mk
 # DESIGN_CONFIG=./designs/sky130hd/microwatt/config.mk
