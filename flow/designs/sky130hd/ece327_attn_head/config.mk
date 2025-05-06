@@ -1,4 +1,4 @@
-export DESIGN_NICKNAME = attn_head
+export DESIGN_NICKNAME = ece327_attn_head
 export DESIGN_NAME = attn_head
 export PLATFORM    = sky130hd
 

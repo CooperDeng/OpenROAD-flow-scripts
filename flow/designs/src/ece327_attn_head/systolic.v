@@ -41,6 +41,11 @@ module systolic (
 			assign D[i * D_W_ACC+:D_W_ACC] = array_out_data[i][N2 - 1];
 			for (_gv_j_2 = 0; _gv_j_2 < N2; _gv_j_2 = _gv_j_2 + 1) begin : col
 				localparam j = _gv_j_2;
+
+				// hard-coded muxes to avoid signed mismatch
+				wire signed [D_W-1:0] in_a_mux = (j == 0) ? A_reg[i * D_W+:D_W] : array_a_out[i][j - 1];
+				wire signed [D_W-1:0] in_b_mux = (i == 0) ? B_reg[j * D_W+:D_W] : array_b_out[i - 1][j];
+
 				pe #(
 					.D_W(D_W),
 					.D_W_ACC(D_W_ACC)
@@ -48,8 +53,8 @@ module systolic (
 					.clk(clk),
 					.rst(rst),
 					.init(init_reg[(i * N2) + j]),
-					.in_a((j == 0 ? A_reg[i * D_W+:D_W] : array_a_out[i][j - 1])),
-					.in_b((i == 0 ? B_reg[j * D_W+:D_W] : array_b_out[i - 1][j])),
+					.in_a(in_a_mux),
+					.in_b(in_b_mux),
 					.in_data(array_in_data[i][j]),
 					.in_valid(array_in_valid[i][j]),
 					.out_a(array_a_out[i][j]),
