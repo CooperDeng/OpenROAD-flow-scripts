@@ -9,9 +9,6 @@ export SDC_FILE 	 = $(DESIGN_HOME)/$(PLATFORM)/$(DESIGN_NICKNAME)/constraint.sdc
 export SYNTH_MEMORY_MAX_BITS = 1048576
 
 # SRAM macro that hopefully works
-export MACRO_LEFS = ./platforms/sky130ram/sky130_sram_1rw1r_128x256_8/sky130_sram_1rw1r_128x256_8.lef
-export MACRO_GDS_FILES = ./platforms/sky130ram/sky130_sram_1rw1r_128x256_8/sky130_sram_1rw1r_128x256_8.gds
-export LIB_FAST = ./platforms/sky130ram/sky130_sram_1rw1r_128x256_8/sky130_sram_1rw1r_128x256_8_TT_1p8V_25C.lib
 export DFF_LIB_FILES = ./platforms/sky130ram/sky130_sram_1rw1r_128x256_8/sky130_sram_1rw1r_128x256_8_TT_1p8V_25C.lib
 
 # Should probably balckbox it.... huh...

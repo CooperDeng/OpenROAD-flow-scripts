@@ -54,7 +54,6 @@ module mem (
     assign web0 = ~(weA << bank_selA); // active low per bank
     assign csb1 = ~(enB << bank_selB); // active low per bank
 
-    // I have no idea what i'm doing
     genvar b;
     generate
         for (b = 0; b < 4; b = b + 1) begin: banks
